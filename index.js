@@ -10,8 +10,6 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/postal'))
   .post('/results', function(req, res){ 
-    const postage = req.body.postage;
-    const weight = req.body.weight;
-    res.render('pages/results', postage, weight);
+    res.render('pages/results', { weight: 1 });
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
