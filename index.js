@@ -9,5 +9,9 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/postal'))
-  .post('/results', (req, res) => res.render('pages/results'))
+  .post('/results', function(req, res){ 
+    const postage = req.params.postage;
+    const weight = req.params.weight;
+    res.render('pages/results', postage, weight);
+  })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
