@@ -11,7 +11,6 @@ express()
   .get('/', (req, res) => res.render('pages/postal'))
   .post('/results', function(req, res){ 
     var weight = req.body.weight;
-    console.log(weight);
-    res.render('pages/results', weight);
+    res.render('pages/results');
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
