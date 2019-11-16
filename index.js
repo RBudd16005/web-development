@@ -12,7 +12,7 @@ express()
   .post('/results', function(req, res){ 
     var postage = req.body.postage;
     var weight = req.body.weight;
-    var price = 0;
+    var price = 0.55;
     switch(postage){
       case 1:
         price = 0.55 + ((weight - 1) * 0.15);
