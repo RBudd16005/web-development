@@ -24,11 +24,12 @@
                     price = 1 + ((weight - 1) * 0.15);
                     postage = "Large Envelopes (Flats)";
                     break;
+
                 case 4:
                     var add = 0;
                     var i;
                     for (i = 0; i < weight; i++) {
-                        if ((i % 4) == 0)
+                        if ((i % 4) === 0)
                         {
                             add += 0.73;
                         }
