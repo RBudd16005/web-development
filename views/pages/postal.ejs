@@ -3,14 +3,14 @@
         <title>Postal Prices</title>
     </head>
     <body>
-        <form name="form" method="GET">
+        <form name="form" action="/results" method="POST">
             <select name="postage">
                 <option value="1">Letters (Stamped)</option>
                 <option value="2">Letters (Metered)</option>
                 <option value="3">Large Envelopes (Flats)</option>
                 <option value="4">First-Class Package Service—Retail</option>
             </select>
-            <input type="number" name="weight">
+            <input type="number" name="weight" placeholder="Weight in ounces">
             <button type="submit" name="submit_form">Submit</button>
         </form>
     </body>
